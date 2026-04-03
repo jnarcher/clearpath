@@ -57,13 +57,20 @@ nav {
   user-select: none;
   background: var(--white);
   padding: 0 48px;
+  height: 64px;
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-container {
+  flex-grow: 1;
+  max-width: 1500px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
   font-family: 'Inter', sans-serif;
-  box-shadow: var(--shadow-lg);
-  z-index: 100;
 }
 
 .nav-left {
