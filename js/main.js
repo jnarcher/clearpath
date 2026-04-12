@@ -37,3 +37,30 @@ document.addEventListener("keydown", (e) => {
     safetyExit();
   }
 })
+
+// ------------ Checklist ----------------
+
+const checklistItems = document.querySelectorAll('.checklist-item');
+const checklistCheckedCount = document.getElementById('checked-count');
+const checklistTotalCount = document.getElementById('total-count');
+
+checklistTotalCount.textContent = checklistItems.length;
+
+checklistItems.forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('checked');
+    checklistCheckedCount.textContent = document.querySelectorAll('.checklist-item.checked').length;
+  });
+});
+
+// ------------ Checklist ----------------
+
+const accordionItems = document.querySelectorAll('.accordion-item');
+
+accordionItems.forEach(item => {
+  item.querySelector('.accordion-trigger').addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    accordionItems.forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});

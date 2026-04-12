@@ -270,6 +270,117 @@ nav {
   }
 }
 
+/* I NEED HELP NOW SECTION */
+
+.help-now-description {
+  font-size: 1rem;
+  color: var(--secondary);
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.help-now-block {
+  margin-bottom: 48px;
+}
+
+.help-now-block h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--neutral);
+  margin-bottom: 16px;
+}
+
+/* HOTLINES */
+
+.hotline-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.hotline-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-left: 4px solid var(--primary);
+}
+
+.hotline-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary);
+}
+
+.hotline-number {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.hotline-number:hover {
+  color: var(--tertiary);
+}
+
+.hotline-detail {
+  font-size: 0.82rem;
+  color: var(--secondary);
+  line-height: 1.5;
+}
+
+/* SHELTERS + PET PROGRAM */
+
+.help-now-stacked {
+  background: #f0f8fb;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.help-now-stacked-text p {
+  font-size: 0.95rem;
+  color: var(--secondary);
+  max-width: 640px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.help-now-link-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.help-now-link-btn:hover {
+  background: var(--tertiary);
+  translate: 0px -2px;
+  box-shadow: var(--shadow);
+}
+
+.pet-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+
+/* LEGAL TOOLS */
+
 #legal-tools {
   background: var(--primary);
   color: var(--white);
@@ -312,6 +423,202 @@ nav {
 .legal-tile-download-icon svg {
   fill: var(--neutral);
   width: 50px;
+}
+
+.checklist-container {
+  margin-top: 40px;
+}
+
+.checklist-container h3,
+.safety-plan-container h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--neutral);
+  margin-bottom: 12px;
+}
+
+.safety-plan-intro {
+  font-size: 0.95rem;
+  color: var(--secondary);
+  margin-bottom: 20px;
+  max-width: 680px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion-item {
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  background: var(--white);
+}
+
+.accordion-trigger {
+  width: 100%;
+  background: var(--white);
+  border: none;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.accordion-trigger:hover {
+  background: #f5f5f5;
+}
+
+.accordion-item.open .accordion-trigger {
+  background: #f5f5f5;
+}
+
+.accordion-step {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--white);
+  background: var(--primary);
+  border-radius: 6px;
+  padding: 4px 8px;
+  flex-shrink: 0;
+}
+
+.accordion-title {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--neutral);
+  flex-grow: 1;
+}
+
+.accordion-chevron {
+  width: 20px;
+  height: 20px;
+  fill: var(--secondary);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.accordion-item.open .accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.accordion-body {
+  display: none;
+  padding: 0 20px 16px 20px;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  line-height: 1.7;
+  border-top: 1px solid #eeeeee;
+  padding-top: 14px;
+}
+
+.accordion-item.open .accordion-body {
+  display: block;
+}
+
+.checklist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.checklist-category {
+  grid-column: 1 / -1;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--secondary);
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.checklist-progress {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 16px;
+}
+
+.checklist-progress span {
+  color: var(--tertiary);
+  font-weight: 800;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: var(--shadow);
+  font-size: 0.95rem;
+  font-family: "Inter", sans-serif;
+  color: var(--neutral);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s;
+}
+
+.checklist-item:hover {
+  translate: 0px -2px;
+  box-shadow: var(--shadow-lg);
+}
+
+.checklist-item.checked {
+  background: #f0faf8;
+  color: var(--secondary);
+}
+
+.checklist-item.checked span {
+  text-decoration: line-through;
+}
+
+.checklist-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.checklist-item.checked .checklist-icon {
+  background: var(--tertiary);
+}
+
+.checklist-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--white);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.checklist-item.checked .checklist-icon svg {
+  opacity: 1;
+}
+
+.safety-plan-wrapper {
+  background: #f0f8fb;
+  border-radius: 16px;
+  padding: 40px;
+  margin-top: 48px;
 }
 
 
