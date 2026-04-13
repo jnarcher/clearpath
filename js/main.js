@@ -24,12 +24,7 @@ sections.forEach(section => observer.observe(section))
 // ------------ Safety Exit ----------------
 
 function safetyExit() {
-  history.replaceState(null, "", location.href);
-
-  history.pushState(null, "", location.href);
-  history.pushState(null, "", location.href);
-
-  window.location.replace("https://google.com");
+  location.replace("https://google.com");
 }
 
 document.addEventListener("keydown", (e) => {
